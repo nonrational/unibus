@@ -1,0 +1,5 @@
+for subdir in $(find . -type d -name spec -exec dirname '{}' \;); do
+    cd $subdir
+    bundle exec rake SPEC_OPTS="-r rspec_junit_formatter --format progress --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml"
+    cd -
+done

@@ -1,5 +1,7 @@
 Api::Engine.routes.draw do
-  scope '/v1' do
-    resource :status, only: :show
+  namespace :api do
+    namespace :v1 do
+      get 'statuses/show'
+    end
   end
 end

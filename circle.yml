@@ -1,0 +1,3 @@
+test:
+  override:
+    - bundle exec rake SPEC_OPTS="-r rspec_junit_formatter --format progress --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml"
