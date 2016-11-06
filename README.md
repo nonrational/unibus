@@ -1,4 +1,4 @@
-# E Unibus Pluram [![](https://circleci.com/gh/nonrational/unibus.png?circle-token=:circle-token)](https://circleci.com/gh/nonrational/unibus)
+# E Unibus Pluram [![CircleCI](https://circleci.com/gh/nonrational/unibus/tree/master.svg?style=svg)](https://circleci.com/gh/nonrational/unibus/tree/master)
 
 > Out of one, many.
 
