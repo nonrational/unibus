@@ -19,5 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise', '~> 4.2.0'
 
   s.add_development_dependency "pg"
+  s.add_development_dependency "pry-rails"
   s.add_development_dependency "rspec-rails"
+  s.add_development_dependency 'rspec_junit_formatter', '~> 0.2.2'
 end

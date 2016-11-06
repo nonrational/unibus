@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise'
+gem 'devise', '~> 4.2.0'
 
 gem 'core', path: '../core'
 gem 'api', path: '../api'
@@ -38,10 +38,8 @@ gem 'api', path: '../api'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-end
-
-group :test do
   gem 'rspec-rails'
+  gem 'rspec_junit_formatter', '~> 0.2.2'
 end
 
 group :development do
