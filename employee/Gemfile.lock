@@ -1,5 +1,5 @@
 PATH
-  remote: ../core
+  remote: ./.engines/core
   specs:
     core (0.1.0)
       devise (~> 4.2.0)
