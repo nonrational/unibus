@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e
 CIRCLE_TEST_REPORTS=${CIRCLE_TEST_REPORTS:-..}
 MIGRATION_APP=customer
 
@@ -7,11 +7,17 @@ export SCHEMA="$PWD/$MIGRATION_APP/db/schema.rb"
 export DATABASE_URL=${DATABASE_URL:-postgresql://localhost/unibus_ci_test}
 export RAILS_ENV=test
 
-(cd $MIGRATION_APP; bundle exec rake db:reset)
+(cd $MIGRATION_APP; bundle && bundle exec rake db:reset)
+
+set +e
+declare -i STATUS=0
 
 for subdir in $(find . -type d -name spec -exec dirname '{}' \;); do
   cd $subdir && echo $subdir
-  bundle 2>&1 > /dev/null
+  bundle
   bundle exec rake SPEC_OPTS="-r rspec_junit_formatter --format progress --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/$subdir-junit.xml"
+  STATUS+=$?
   cd -
 done
+
+exit ${STATUS}
