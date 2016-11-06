@@ -1,11 +1,11 @@
 PATH
-  remote: ../api
+  remote: ./.engines/api
   specs:
     api (0.1.0)
       rails (~> 5.0.0, >= 5.0.0.1)
 
 PATH
-  remote: ../core
+  remote: ./.engines/core
   specs:
     core (0.1.0)
       devise (~> 4.2.0)
