@@ -1,0 +1,23 @@
+{
+  "name": "unibus-customer",
+  "scripts": {},
+  "env": {
+    "PROCFILE": "customer/Procfile",
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 0
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    { "url": "heroku/ruby" },
+    { "url": "https://github.com/heroku/heroku-buildpack-multi-procfile" }
+  ]
+}
