@@ -2,16 +2,6 @@
 
 _Out of one, many._
 
-# Approach
-
-One Application per Audience
-
-### Current, Simple Case
-<img src='http://i.imgur.com/QXh6frp.png' width=500>
-
-### Long-term, Advanced Case
-<img src='http://i.imgur.com/fxYAXfV.png' width=500>
-
 # Features
 
 - Run RSpec tests for all projects automatically via CircleCI
@@ -23,17 +13,23 @@ One Application per Audience
 
 # Why?
 
+- Build one application-per-audience.
 - Be [AuthZ Free™](https://www.betterment.com/resources/inside-betterment/engineering/security-framework/) by spinning up new spoke Rails applications (that include `core`) for each new consumer.
 - Given a single repo, all related applications (that share a database) are free to run alongside one another without tripping over internal gem versioning.
 - Each Rails app can mount its own `devise` model, whether or not that model lives in `core`.
 
+# Structure
+
+<img src='http://i.imgur.com/QXh6frp.png' width=500>
+
 # Caveats
 
-- A single application must be appointed "primary" and is responsible for maintaining and running migrations. In our case, it's `customer`. However, that makes utilizing `rails g model Foo` in `employee` a little more cumbersome.
+A single application must be appointed "primary" and is responsible for maintaining and running migrations. In our case, it's `customer`. However, that makes utilizing `rails g model Foo` in `employee` a little more cumbersome.
 
 # Tips
 
-- Ignore `.engines` in your editor's project settings
+- Ignore `.engines` in your editor's project settings.
+
 
 ### Setup Notes
 
