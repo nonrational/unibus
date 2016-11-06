@@ -2,6 +2,7 @@ PATH
   remote: ../core
   specs:
     core (0.1.0)
+      devise (~> 4.2.0)
       rails (~> 5.0.0, >= 5.0.0.1)
 
 GEM
