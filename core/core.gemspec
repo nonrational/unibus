@@ -9,9 +9,8 @@ Gem::Specification.new do |s|
   s.version     = Core::VERSION
   s.authors     = ["Alan Norton"]
   s.email       = ["alan@mealpal.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Core."
-  s.description = "TODO: Description of Core."
+  s.homepage    = "https://mealpal.io"
+  s.summary     = "ActiveRecords, core business logic"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

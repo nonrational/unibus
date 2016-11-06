@@ -16,4 +16,7 @@ rails plugin new core -T --mountable --dummy-path=spec/dummy --database=postgres
 
 rails new customer -T --database=postgresql
 rails new employee -T --database=postgresql
+
+ln -s $PWD/customer ~/.pow/unibus-customer
+ln -s $PWD/employee ~/.pow/unibus-employee
 ```
