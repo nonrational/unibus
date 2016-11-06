@@ -5,7 +5,7 @@ _Out of one, many._
 # Features
 
 - Tests run via CircleCI
-- Heroku deployment (with [](https://github.com/nonrational/heroku-buildpack-hub-spoke))
+- Heroku deployment (with [https://github.com/nonrational/heroku-buildpack-hub-spoke](https://github.com/nonrational/heroku-buildpack-hub-spoke))
 
 # Why?
 
@@ -21,7 +21,7 @@ _Out of one, many._
 
 - Ignore `.engines` in your editor's project settings
 
-# Notes
+### Notes
 
 ```shell
 # create all the rails app
