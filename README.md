@@ -9,7 +9,7 @@ One Application per Audience
 ### Current, Simple Case
 <img src='http://i.imgur.com/QXh6frp.png' width=500>
 
-###
+### Long-term, Advanced Case
 <img src='http://i.imgur.com/fxYAXfV.png' width=500>
 
 # Features
