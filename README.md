@@ -2,10 +2,24 @@
 
 _Out of one, many._
 
+# Approach
+
+One Application per Audience
+
+### Current, Simple Case
+<img src='http://i.imgur.com/QXh6frp.png' width=500>
+
+###
+<img src='http://i.imgur.com/fxYAXfV.png' width=500>
+
 # Features
 
-- Tests run via CircleCI
-- Heroku deployment (with [https://github.com/nonrational/heroku-buildpack-hub-spoke](https://github.com/nonrational/heroku-buildpack-hub-spoke))
+- Run RSpec tests for all projects automatically via CircleCI
+  - See `./script/ci`
+  - TODO: Parallelize runs across multiple containers.
+  - Travis? Untested, but probably works.
+- Heroku Deployment via [Hub-Spoke Buildpack](https://github.com/nonrational/heroku-buildpack-hub-spoke)
+  - Include arbitrary number of engines in each application.
 
 # Why?
 
@@ -21,7 +35,7 @@ _Out of one, many._
 
 - Ignore `.engines` in your editor's project settings
 
-### Notes
+### Setup Notes
 
 ```shell
 # create all the rails app
