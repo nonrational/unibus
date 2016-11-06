@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="2" failures="0" errors="0" time="0.406181" timestamp="2016-11-06T08:54:30-05:00">
-  <!-- Randomized with seed 19984 -->
-  <properties/>
-  <testcase classname="spec.requests.api_status_check_spec" name="API status check succeeds with valid password" file="./spec/requests/api_status_check_spec.rb" time="0.351616"/>
-  <testcase classname="spec.requests.user_login_spec" name="user login succeeds with valid password" file="./spec/requests/user_login_spec.rb" time="0.053670"/>
-</testsuite>

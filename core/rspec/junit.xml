@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="4" failures="0" errors="0" time="0.280420" timestamp="2016-11-06T08:54:25-05:00">
-  <!-- Randomized with seed 27649 -->
-  <properties/>
-  <testcase classname="spec.models.admin_spec" name="Admin requires a password" file="./spec/models/admin_spec.rb" time="0.018080"/>
-  <testcase classname="spec.models.admin_spec" name="Admin can be valid" file="./spec/models/admin_spec.rb" time="0.129321"/>
-  <testcase classname="spec.models.user_spec" name="User requires a password" file="./spec/models/user_spec.rb" time="0.011706"/>
-  <testcase classname="spec.models.user_spec" name="User can be valid" file="./spec/models/user_spec.rb" time="0.120145"/>
-</testsuite>
