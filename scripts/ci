@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
 
-RESET=${RESET:-0}
-CIRCLE_TEST_REPORTS=${CIRCLE_TEST_REPORTS:-.}
+CIRCLE_TEST_REPORTS=${CIRCLE_TEST_REPORTS:-..}
+MIGRATION_APP=customer
+
+export SCHEMA="$PWD/$MIGRATION_APP/db/schema.rb"
+export DATABASE_URL=${DATABASE_URL:-postgresql://localhost/unibus_ci_test}
+export RAILS_ENV=test
+
+(cd $MIGRATION_APP; bundle exec rake db:reset)
 
 for subdir in $(find . -type d -name spec -exec dirname '{}' \;); do
-    cd $subdir
-    echo $subdir
-    bundle 2>&1 > /dev/null
-    (( RESET )) && RAILS_ENV=test rake db:reset
-    bundle exec rake SPEC_OPTS="-r rspec_junit_formatter --format progress --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml"
-    cd - 2>&1 > /dev/null
+  cd $subdir && echo $subdir
+  bundle 2>&1 > /dev/null
+  bundle exec rake SPEC_OPTS="-r rspec_junit_formatter --format progress --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/$subdir-junit.xml"
+  cd -
 done
