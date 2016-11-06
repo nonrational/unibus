@@ -2,6 +2,9 @@
 
 _Out of one, many._
 
+- https://unibus-customer-staging.herokuapp.com/users/sign_in
+- https://unibus-employee-staging.herokuapp.com/admins/sign_in
+
 # Features
 
 - Run RSpec tests for all projects automatically via CircleCI
