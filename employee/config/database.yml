@@ -1,4 +1,4 @@
-<% ENV['SCHEMA'] ||= '../customer/db/schema.rb' %>
+<% ENV['SCHEMA'] ||= "#{Rails.root}/../customer/db/schema.rb" %>
 
 default: &default
   adapter: postgresql
