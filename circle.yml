@@ -1,6 +1,53 @@
-machine:
-  environment:
-    DATABASE_URL: postgres://ubuntu:@127.0.0.1:5432/circle_test
-test:
-  override:
-    - ./scripts/ci
+default_rails_steps: &default_rails_steps
+  - run:
+      command: |
+      cd {{ job }} && rake
+
+
+version: 2
+jobs:
+  core:
+    docker:
+      - image: circleci/ruby:2.3-node-browsers
+        environment:
+          DATABASE_URL: postgres://root@127.0.0.1:5432/circle_test
+      - image: circleci/postgres:9.5-alpine-postgis-ram
+    steps:
+      *default_rails_steps
+
+  api:
+    docker:
+      - image: circleci/ruby:2.3-node-browsers
+        environment:
+          DATABASE_URL: postgres://root@127.0.0.1:5432/circle_test
+      - image: circleci/postgres:9.5-alpine-postgis-ram
+    steps:
+      *default_rails_steps
+
+  customer:
+    docker:
+      - image: circleci/ruby:2.3-node-browsers
+        environment:
+          DATABASE_URL: postgres://root@127.0.0.1:5432/circle_test
+      - image: circleci/postgres:9.5-alpine-postgis-ram
+    steps:
+      *default_rails_steps
+
+  employee:
+    docker:
+      - image: circleci/ruby:2.3-node-browsers
+        environment:
+          DATABASE_URL: postgres://root@127.0.0.1:5432/circle_test
+      - image: circleci/postgres:9.5-alpine-postgis-ram
+    steps:
+      *default_rails_steps
+
+# https://circleci.com/docs/2.0/workflows/
+workflows:
+  version: 2
+  build_all:
+    jobs:
+      - core
+      - api
+      - customer
+      - employee
