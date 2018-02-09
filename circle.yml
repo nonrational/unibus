@@ -1,7 +1,7 @@
 default_rails_steps: &default_rails_steps
   - checkout
   - run:
-      command: cd $CIRCLE_JOB && rake
+      command: cd $CIRCLE_JOB && bundle && rake
 
 
 version: 2
