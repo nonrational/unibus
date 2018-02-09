@@ -147,4 +147,4 @@ DEPENDENCIES
   rspec_junit_formatter (~> 0.2.2)
 
 BUNDLED WITH
-   1.13.6
+   1.16.1
