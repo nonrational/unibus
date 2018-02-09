@@ -1,4 +1,5 @@
 default_rails_steps: &default_rails_steps
+  - checkout
   - run:
       command: cd $CIRCLE_JOB && rake
 
