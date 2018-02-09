@@ -1,6 +1,6 @@
 default_rails_steps: &default_rails_steps
   - run:
-      command: cd {{ job }} && rake
+      command: cd $CIRCLE_JOB && rake
 
 
 version: 2
