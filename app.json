@@ -1,0 +1,57 @@
+{
+  "name": "unibus",
+  "description": "",
+  "scripts": {
+  },
+  "env": {
+    "APP_BASE": {
+      "required": true
+    },
+    "APP_DEPS": {
+      "required": true
+    },
+    "DATABASE_URL": {
+      "required": true
+    },
+    "ENGINE_PATH": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    },
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/nonrational/heroku-buildpack-hub-spoke"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
