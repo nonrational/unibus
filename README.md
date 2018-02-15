@@ -7,10 +7,8 @@ _Out of one, many._
 
 # Features
 
-- Run RSpec tests for all projects automatically via CircleCI
+- Run RSpec tests for all projects automatically via CircleCI 2.0
   - See `./script/ci`
-  - TODO: Parallelize runs across multiple containers.
-  - Travis? Untested, but probably works.
 - Heroku Deployment via [Hub-Spoke Buildpack](https://github.com/nonrational/heroku-buildpack-hub-spoke)
   - Include arbitrary number of engines in each application.
 
