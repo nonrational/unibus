@@ -10,6 +10,7 @@ PATH
   specs:
     core (0.1.0)
       devise (~> 4.2.0)
+      loofah (~> 2.2.1)
       nokogiri (~> 1.8.1)
       rails (~> 5.0.0, >= 5.0.0.1)
 
@@ -91,7 +92,7 @@ GEM
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    loofah (2.1.1)
+    loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
