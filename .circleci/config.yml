@@ -16,8 +16,8 @@ jobs:
     docker:
       - image: circleci/ruby:2.3-node-browsers
         environment:
-          DATABASE_URL: postgres://root@127.0.0.1:5432/circle_test
-      - image: circleci/postgres:9.5-alpine-postgis-ram
+          DATABASE_URL: postgres://postgres@127.0.0.1:5432/circle_test
+      - image: circleci/postgres:11.6-alpine
     steps:
       *default_rails_steps
 
@@ -25,8 +25,8 @@ jobs:
     docker:
       - image: circleci/ruby:2.3-node-browsers
         environment:
-          DATABASE_URL: postgres://root@127.0.0.1:5432/circle_test
-      - image: circleci/postgres:9.5-alpine-postgis-ram
+          DATABASE_URL: postgres://postgres@127.0.0.1:5432/circle_test
+      - image: circleci/postgres:11.6-alpine
     steps:
       *default_rails_steps
 
@@ -34,8 +34,8 @@ jobs:
     docker:
       - image: circleci/ruby:2.3-node-browsers
         environment:
-          DATABASE_URL: postgres://root@127.0.0.1:5432/circle_test
-      - image: circleci/postgres:9.5-alpine-postgis-ram
+          DATABASE_URL: postgres://postgres@127.0.0.1:5432/circle_test
+      - image: circleci/postgres:11.6-alpine
     steps:
       *default_rails_steps
 
@@ -43,8 +43,8 @@ jobs:
     docker:
       - image: circleci/ruby:2.3-node-browsers
         environment:
-          DATABASE_URL: postgres://root@127.0.0.1:5432/circle_test
-      - image: circleci/postgres:9.5-alpine-postgis-ram
+          DATABASE_URL: postgres://postgres@127.0.0.1:5432/circle_test
+      - image: circleci/postgres:11.6-alpine
     steps:
       *default_rails_steps
 
