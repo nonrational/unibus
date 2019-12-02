@@ -1,8 +1,14 @@
 default_rails_steps: &default_rails_steps
+  - run:
+      name: update bundler
+      command: |
+        gem update --system
+        gem install bundler -v 2.0.2
+
   - checkout
+
   - run:
       command: cd $CIRCLE_JOB && bundle && rake
-
 
 version: 2
 jobs:
