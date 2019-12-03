@@ -1,9 +1,9 @@
 default_rails_steps: &default_rails_steps
-  # - run:
-  #     name: update bundler
-  #     command: |
-  #       gem update --system
-  #       gem install bundler -v 2.0.2
+  - run:
+      name: update bundler
+      command: |
+        gem update --system
+        gem install bundler -v 2.0.2
 
   - checkout
 
