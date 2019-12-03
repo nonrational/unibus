@@ -3,8 +3,8 @@ PATH
   specs:
     core (0.1.0)
       devise (~> 4.7.1)
-      loofah (>= 2.2.1, < 2.5.0)
-      nokogiri (>= 1.8.1, < 1.11.0)
+      loofah (~> 2.4.0)
+      nokogiri (~> 1.10.4)
       rails (~> 5.0.0, >= 5.0.0.1)
 
 GEM
