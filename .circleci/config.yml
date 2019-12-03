@@ -1,9 +1,9 @@
 default_rails_steps: &default_rails_steps
-  - run:
-      name: update bundler
-      command: |
-        gem update --system
-        gem install bundler -v 2.0.2
+  # - run:
+  #     name: update bundler
+  #     command: |
+  #       gem update --system
+  #       gem install bundler -v 2.0.2
 
   - checkout
 
@@ -14,7 +14,7 @@ version: 2
 jobs:
   core:
     docker:
-      - image: circleci/ruby:2.3-node-browsers
+      - image: circleci/ruby:2.6-node-browsers
         environment:
           DATABASE_URL: postgres://postgres@127.0.0.1:5432/circle_test
       - image: circleci/postgres:11.6-alpine
@@ -23,7 +23,7 @@ jobs:
 
   api:
     docker:
-      - image: circleci/ruby:2.3-node-browsers
+      - image: circleci/ruby:2.6-node-browsers
         environment:
           DATABASE_URL: postgres://postgres@127.0.0.1:5432/circle_test
       - image: circleci/postgres:11.6-alpine
@@ -32,7 +32,7 @@ jobs:
 
   customer:
     docker:
-      - image: circleci/ruby:2.3-node-browsers
+      - image: circleci/ruby:2.6-node-browsers
         environment:
           DATABASE_URL: postgres://postgres@127.0.0.1:5432/circle_test
       - image: circleci/postgres:11.6-alpine
@@ -41,7 +41,7 @@ jobs:
 
   employee:
     docker:
-      - image: circleci/ruby:2.3-node-browsers
+      - image: circleci/ruby:2.6-node-browsers
         environment:
           DATABASE_URL: postgres://postgres@127.0.0.1:5432/circle_test
       - image: circleci/postgres:11.6-alpine
