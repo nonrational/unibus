@@ -8,14 +8,14 @@ Gem::Specification.new do |s|
   s.name        = "api"
   s.version     = Api::VERSION
   s.authors     = ["Alan Norton"]
-  s.email       = ["alan@mealpal.com"]
+  s.email       = ["git@nonration.al"]
   s.homepage    = "http://unibus.io"
   s.summary     = "JSON API Endpoints"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 5.0.0", ">= 5.0.0.1"
+  s.add_dependency "rails", "~> 5.2", ">= 5.2.4.2"
 
   s.add_development_dependency "pg"
   s.add_development_dependency "pry-rails"

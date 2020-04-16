@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name        = "core"
   s.version     = Core::VERSION
   s.authors     = ["Alan Norton"]
-  s.email       = ["alan@mealpal.com"]
+  s.email       = ["git@nonration.al"]
   s.homepage    = "https://unibus.io"
   s.summary     = "ActiveRecords, core business logic"
   s.license     = "MIT"
@@ -16,10 +16,11 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 5.0.0", ">= 5.0.0.1"
+  s.add_dependency "rails", "~> 5.2", ">= 5.2.4.2"
   s.add_dependency 'devise', '~> 4.7.1'
   s.add_dependency "nokogiri", "~> 1.10.4"
   s.add_dependency 'loofah', "~> 2.4.0"
+
 
   s.add_development_dependency "pg"
   s.add_development_dependency "pry-rails"
