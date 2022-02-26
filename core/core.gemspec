@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 5.2", ">= 5.2.4.2"
   s.add_dependency 'devise', '~> 4.7.1'
-  s.add_dependency "nokogiri", "~> 1.10.4"
+  s.add_dependency "nokogiri", ">= 1.10.4", "< 1.14.0"
   s.add_dependency 'loofah', "~> 2.4.0"
 
 
